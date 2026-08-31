@@ -1,0 +1,82 @@
+# ==============================================================================
+# Git Ignore Rules for Python / Deep Learning & NLP Project
+# ==============================================================================
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+*.dll
+
+# Model Checkpoints, Weights & LoRA Adapters
+checkpoints/
+checkpoint-*/
+final_adapter/
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.onnx
+*.tflite
+
+# Test & Temporary Directories
+tmp_test/
+tmp/
+temp/
+scratch/
+
+# Hugging Face & Cache
+.cache/
+huggingface/
+datasets/
+hf_cache/
+
+# Experiment Tracking & Logs
+wandb/
+runs/
+logs/
+*.log
+events.out.tfevents.*
+
+# Datasets / Large Data Files (uncomment or adjust as needed)
+# *.csv
+# *.parquet
+# *.arrow
+# *.jsonl
+# *.zip
+# *.tar.gz
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.secret
+*.token
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# IDE / Editor Specific Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
