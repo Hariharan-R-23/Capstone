@@ -1,0 +1,55 @@
+{
+  "top_5_artists": [
+    "Frank Sinatra",
+    "Dean Martin",
+    "Ella Fitzgerald",
+    "Elvis Presley",
+    "Willie Nelson"
+  ],
+  "artists_meta": {
+    "Elvis Presley": {
+      "genre": "Rock & Roll / Rockabilly",
+      "style_desc": "Soulful rockabilly rhythm, charismatic vibrato, energetic guitar hooks",
+      "default_theme": "Passionate Romance and Heartbreak"
+    },
+    "Willie Nelson": {
+      "genre": "Country & Outlaw Folk",
+      "style_desc": "Acoustic storytelling, laid-back narrative cadence, rustic melancholy",
+      "default_theme": "Rambling Roads, Whiskey and Solitude"
+    },
+    "Ella Fitzgerald": {
+      "genre": "Vocal Jazz & Swing",
+      "style_desc": "Impeccable diction, swinging rhythm, playful and elegant phrasing",
+      "default_theme": "Starlight Romance and Sophisticated Longing"
+    },
+    "Frank Sinatra": {
+      "genre": "Traditional Pop & Big Band",
+      "style_desc": "Dramatic phrasing, velvety baritone swagger, timeless urban romance",
+      "default_theme": "Midnight Melancholy and Resilient Ambition"
+    },
+    "Dean Martin": {
+      "genre": "Easy Listening & Crooner Pop",
+      "style_desc": "Effortless casual charm, warm melodic flow, romantic nonchalance",
+      "default_theme": "Sunlit Nostalgia and Carefree Love"
+    }
+  },
+  "emotion_map": {
+    "sadness": "Melancholic Grief & Heartbreak",
+    "joy": "Euphoric Romance & Joy",
+    "fear": "Haunted Longing & Vulnerability",
+    "anger": "Defiant Passion & Frustration",
+    "surprise": "Bittersweet Wonder & Shock",
+    "neutral": "Reflective Nostalgia & Serenity",
+    "disgust": "Disillusionment & Cynicism"
+  },
+  "artist_counts": {
+    "Frank Sinatra": 302,
+    "Dean Martin": 289,
+    "Ella Fitzgerald": 338,
+    "Elvis Presley": 598,
+    "Willie Nelson": 427
+  },
+  "total_valid_songs": 1954,
+  "train_samples": 1758,
+  "val_samples": 196
+}

@@ -199,38 +199,46 @@ python rl_ppo_trainer.py --language "tamil" --sft_model_path "./checkpoints/tami
 
 ---
 
-## 5. Repository Structure Reference
+## 5. Review 2: Top 5 Artists Streamlit Web Studio
 
+A dedicated, evaluator-ready Streamlit front-end and Top 5 artists training framework:
+
+### 1. Launching the Streamlit Web Application
+```powershell
+streamlit run app.py
 ```
-e:/Capstone/Code/
-├── prompt.md             # Original capstone specification & requirements
-├── requirements.txt      # Pinned dependencies (PyTorch, Transformers, TRL, PEFT)
-├── config.py             # Dataclass configurations & high-spec hardware presets
-├── dataset_loader.py     # Step 1: English & Tamil dataset loaders and prompt builders
-├── sft_trainer.py        # Step 2: LoRA / QLoRA SFT training loop
-├── reward_engine.py      # Step 3: Multi-Objective Rhyme & Mood reward scoring
-├── rl_ppo_trainer.py     # Step 4: TRL PPOTrainer reinforcement learning loop
-├── inference.py          # Step 5: Interactive & CLI lyric generator with live evaluation
-└── HOW_TO_USE.md         # Comprehensive system manual and execution guide
-```
+Or double-click `run_app.bat` (in `./Code`) or `launch_streamlit.bat` (in project root).
+
+### 2. Top 5 Artists Fine-Tuned Model Pipeline
+- **Artists with Maximum Songs**:
+  1. **Elvis Presley** (598 songs) - Rock & Roll / Rockabilly
+  2. **Willie Nelson** (427 songs) - Country & Outlaw Folk
+  3. **Ella Fitzgerald** (338 songs) - Vocal Jazz & Swing
+  4. **Frank Sinatra** (302 songs) - Traditional Pop & Big Band
+  5. **Dean Martin** (289 songs) - Easy Listening & Crooner Pop
+- **Dataset Preparation**: `python prepare_top5_dataset.py` (filters strictly to top 5 artists and structures multi-attribute conditioning).
+- **GPU Fine-Tuning**: `python train_top5_model.py` (trains LoRA adapters in 4-bit bfloat16 QLoRA on NVIDIA RTX 5050 GPU, output saved to `./checkpoints/top5_artists_lyric_model/final_adapter`).
+- **Inference & Metrics**: `python inference_top5.py` (calculates Phonetic Rhyme, Mood Alignment, Fluency & Flow, and Meter Regularity).
 
 ---
 
-## 6. Verification & Dry-Run Testing
+## 6. Repository Structure Reference
 
-You can run individual modules locally for dry-run verification:
-
-1. **Verify Dataset Formatter**:
-   ```bash
-   python -c "from dataset_loader import EnglishLyricDatasetLoader; print(EnglishLyricDatasetLoader('manoh2f2/tsterbak-lyrics-dataset-with-emotions', max_samples=10).prepare_dataset())"
-   ```
-
-2. **Verify Multi-Objective Reward Engine**:
-   ```bash
-   python -c "from reward_engine import MultiObjectiveRewardEngine; eng = MultiObjectiveRewardEngine(); print(eng.evaluate_sample('Melancholy', 'The rain is falling on the floor\nI walk away and shut the door'))"
-   ```
-
-3. **Verify Configuration**:
-   ```bash
-   python -c "import config; print('SFT Output Dir:', config.SFTTrainingConfig().output_dir)"
-   ```
+```
+d:/Capstone/Code/
+├── app.py                  # Streamlit Interactive Web Studio & Evaluator Platform
+├── inference_top5.py       # Top 5 Artists inference engine & live multi-metric scoring
+├── prepare_top5_dataset.py # Data ingestion & cleaning for Top 5 artists
+├── train_top5_model.py     # QLoRA fine-tuning pipeline for Top 5 artists
+├── run_app.bat             # Double-click launcher for Streamlit front-end
+├── top5_dataset/           # Memory-mapped dataset cache for Top 5 artists
+├── prompt.md               # Original capstone specification & requirements
+├── requirements.txt        # Pinned dependencies (PyTorch, Transformers, TRL, PEFT, Streamlit)
+├── config.py               # Dataclass configurations & high-spec hardware presets
+├── dataset_loader.py       # Step 1: English & Tamil dataset loaders and prompt builders
+├── sft_trainer.py          # Step 2: LoRA / QLoRA SFT training loop
+├── reward_engine.py        # Step 3: Multi-Objective Rhyme & Mood reward scoring
+├── rl_ppo_trainer.py       # Step 4: TRL PPOTrainer reinforcement learning loop
+├── inference.py            # Step 5: Interactive & CLI lyric generator with live evaluation
+└── HOW_TO_USE.md           # Comprehensive system manual and execution guide
+```

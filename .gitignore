@@ -50,10 +50,10 @@ logs/
 *.log
 events.out.tfevents.*
 
-# Datasets / Large Data Files (uncomment or adjust as needed)
+# Datasets / Large Data Files
 # *.csv
 # *.parquet
-# *.arrow
+*.arrow
 # *.jsonl
 # *.zip
 # *.tar.gz

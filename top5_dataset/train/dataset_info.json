@@ -1,0 +1,48 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "artist": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "song": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "mood": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "genre": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "theme": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "lyrics": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "prompt": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "completion": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "large_string",
+      "_type": "Value"
+    },
+    "line_count": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}
