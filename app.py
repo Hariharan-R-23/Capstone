@@ -169,6 +169,7 @@ def get_engine():
     )
 
 
+@st.cache_data(show_spinner=False)
 def text_to_speech_mp3(text: str) -> Optional[bytes]:
     """Generate vocal recitation audio for lyrics."""
     try:
