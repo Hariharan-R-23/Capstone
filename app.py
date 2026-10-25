@@ -14,12 +14,18 @@ Faculty Guide: Dr. Sundhara Kumar K.B. | Shiv Nadar University Chennai
 import os
 import sys
 import io
+import re
 import json
 import time
 import base64
+import logging
+from typing import Optional, List, Dict, Any
 import streamlit as st
 import pandas as pd
 import torch
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 # Import custom engine
 from inference_top5 import Top5LyricEngine, TOP_5_ARTISTS_INFO
